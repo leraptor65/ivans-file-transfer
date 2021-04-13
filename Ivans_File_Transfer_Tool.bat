@@ -5,7 +5,7 @@ cls
 goto MAIN
 
 :MAIN
-REM Some useful variables
+:: Some useful variables
 set /a boolALL = 0
 set /a boolSOURCE = 0
 set /a boolDESTINATION = 0
@@ -93,7 +93,7 @@ echo:
 echo ++++++++++++++++++++++++++++++++++++++++++++
 echo:
 wmic logicaldisk get deviceid, volumename
-REM , description
+:: description
 echo:
 echo ++++++++++++++++++++++++++++++++++++++++++++
 echo:
@@ -136,7 +136,7 @@ if "%CHOICE2%" == "1" (
     echo:
     echo Which drive are you copying from? (Typically it's C)
     set /p SRC="Please enter source drive LETTER here: "
-    REM if defined SRC if "%SRC:~1,1%"=="" ( 
+    :: if defined SRC if "%SRC:~1,1%"=="" ( 
     set SRCPATH=%SRC%:\Users
     if exist "%SRCPATH%" (
         echo SOURCE IS SET TO 
@@ -276,7 +276,7 @@ echo:
 echo Starting Transfer
 pause
 @echo on
-REM xcopy
+:: xcopy
 @echo off
 echo:
 pause
